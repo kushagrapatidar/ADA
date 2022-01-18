@@ -7,8 +7,8 @@ linearsearch(n)
 
 sleep(4)
 system('cls')
-# from insertion_sort import insertionsort
-# arr=input('Enter the array elements with spaces: ').split()
-# arr=list(map(int, arr))
-# insertionsort(arr)
-# print(arr)
+from insertion_sort import insertionsort
+arr=input('Enter the array elements with spaces: ').split()
+arr=list(map(int, arr))
+insertionsort(arr)
+print(arr)
