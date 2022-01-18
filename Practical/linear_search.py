@@ -1,7 +1,7 @@
 def linearsearch(n):
     from random import randint
     arr=[randint(0,x+1) for x in range(1,101)]
-    print(f'{arr}\n{len(arr)}')
+    print(f'{arr}\n Length: {len(arr)} \n')
     
     idx=None
     for _ in arr:
