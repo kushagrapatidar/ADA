@@ -1,5 +1,6 @@
 import datetime, os
 os.system('cls')
+
 a = datetime.datetime.now()
 from linear_search import linearsearch
 n=int(input('Enter the number: '))
