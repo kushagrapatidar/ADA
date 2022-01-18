@@ -1,5 +1,6 @@
 from os import system
 from time import sleep
+
 system('cls')
 from linear_search import linearsearch
 n=int(input('Enter the number: '))
