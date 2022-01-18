@@ -1,5 +1,5 @@
 def linearsearch(n):
-    from random import randint,shuffle
+    from random import randint
     arr=[randint(0,x+1) for x in range(1,101)]
     print(f'{arr}\n{len(arr)}')
     
