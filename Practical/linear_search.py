@@ -1,13 +1,12 @@
-def linearsearch(n):
+def linearsearch(n, idx=list(), arr=None):
     from random import randint
-    arr=[randint(0,x+1) for x in range(1,101)]
-    print(f'{arr}\n Length: {len(arr)} \n')
+    if arr==None:
+        arr=[randint(0,x+1) for x in range(1,101)]
+        print(f'{arr}\n Length: {len(arr)} \n')
     
-    idx=None
     for _ in arr:
         if _==n:
-            idx=arr.index(_)+1
-            print(f"{n} found in the list: Index- {idx}")
-            break
-    if idx==None:
-        print(f'{n} not found in the list')
+            idx.append(arr.index(_)+1)
+            idx=linearsearch(n, idx, arr[idx[-1]:len(arr)])
+    
+    return(idx)

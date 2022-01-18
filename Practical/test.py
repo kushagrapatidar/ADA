@@ -4,7 +4,11 @@ os.system('cls')
 a = datetime.datetime.now()
 from linear_search import linearsearch
 n=int(input('Enter the number: '))
-linearsearch(n)
+idx_lst=linearsearch(n)
+if idx_lst==None:
+    print(f'{n} not found in the list')
+else:
+    print(f"{n} found in the list: Frequency- {len(idx_lst)}\nIndex- {idx_lst}")
 b = datetime.datetime.now()
 print(b-a)
 
