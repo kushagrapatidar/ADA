@@ -7,7 +7,7 @@ def linearsearch(n):
     for _ in arr:
         if _==n:
             idx=arr.index(_)+1
-            print(f"{n} found: Index- {idx}")
+            print(f"{n} found in the list: Index- {idx}")
             break
     if idx==None:
-        print(f'{n} not Found')
+        print(f'{n} not found in the list')
