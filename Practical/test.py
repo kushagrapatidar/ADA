@@ -20,13 +20,10 @@ os.system('cls')
 # print(b-a)
 
 #Linear Search -2
-a = datetime.datetime.now()
-from linear_search import linearsearch2
+from linear_search import linearsearch2, find_freq
 n=int(input('Enter the number: '))
 idx_lst=linearsearch2(n)
 if idx_lst==None:
     print(f'{n} not found in the list')
 else:
-    print(f"{n} found in the list: Frequency- {len(idx_lst)}\nIndex- {idx_lst}")
-b = datetime.datetime.now()
-print(b-a)
+    print(f"{n} found in the list:\nIndex- {idx_lst}")
