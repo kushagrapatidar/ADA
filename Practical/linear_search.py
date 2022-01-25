@@ -32,7 +32,7 @@ def find_freq(n):
     else:
         return len(idx_lst)
 
-if True:
+if __name__== '__main__':
     n1=int(input('Enter the number: '))
     linearsearch(n1)
     
