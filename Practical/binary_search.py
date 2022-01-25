@@ -11,7 +11,6 @@ def binarysearch_iter(arr,x):
             s=i+1
         else:
             e=i-1
-    return 0
 
 def binarysearch_rec(arr,s,e,x):
     if x>arr[-1] or x<arr[0]:
