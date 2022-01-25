@@ -1,6 +1,3 @@
-from pip import main
-
-
 def insertionsort_asc(arr):
     l=len(arr)
     for i in range(1,l):
