@@ -1,3 +1,5 @@
+#Que-06
+
 def binarysearch_iter(arr,x):
     if x>arr[-1] or x<arr[0]:
         return 0
