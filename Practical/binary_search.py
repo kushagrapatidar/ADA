@@ -1,44 +1,44 @@
 #Que-06
 
-def binarysearch_iter(arr,x):
-    if x>arr[-1] or x<arr[0]:
+def binarysearch_iter(arr,n):
+    if n>arr[-1] or n<arr[0]:
         return 0
     s=0
     e=len(arr)-1
     while True:
         i=s+(e-s)//2
-        if arr[i]==x:
+        if arr[i]==n:
             return i+1
-        elif arr[i]<x:
+        elif arr[i]<n:
             s=i+1
         else:
             e=i-1
 
-def binarysearch_rec(arr,s,e,x):
-    if x>arr[-1] or x<arr[0]:
+def binarysearch_rec(arr,s,e,n):
+    if n>arr[-1] or n<arr[0]:
         return 0
     i=s+(e-s)//2
-    if arr[i]==x:
+    if arr[i]==n:
         return i+1
-    elif arr[i]<x:
+    elif arr[i]<n:
         s=i+1
-        return binarysearch_rec(arr,s,e,x)
+        return binarysearch_rec(arr,s,e,n)
     else:
         e=i-1
-        return binarysearch_rec(arr,s,e,x)
+        return binarysearch_rec(arr,s,e,n)
     
 if __name__=='__main__':
     arr=list(map(int, input('Enter the array elements with spaces: ').split()))
-    x=int(input('Enter the element: '))
-    idx_iter=binarysearch_iter(arr,x)
-    idx_rec=binarysearch_rec(arr,0, len(arr)-1,x)
+    n=int(input('Enter the element: '))
+    idx_iter=binarysearch_iter(arr,n)
+    idx_rec=binarysearch_rec(arr,0, len(arr)-1,n)
     print('\n')
     if idx_iter==0:
-        print(f'Element {x} not found in array by iterative binary search')
+        print(f'Element {n} not found in array by iterative binary search')
     else:
-        print(f'Element {x} found by iterative binary search at index: {idx_iter}')
+        print(f'Element {n} found by iterative binary search at index: {idx_iter}')
 
     if idx_rec==0:
-        print(f'Element {x} not found in array by recursive binary search')
+        print(f'Element {n} not found in array by recursive binary search')
     else:
-        print(f'Element {x} found by recursive binary search at index: {idx_rec}')
+        print(f'Element {n} found by recursive binary search at index: {idx_rec}')
