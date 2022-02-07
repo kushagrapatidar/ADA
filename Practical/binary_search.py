@@ -22,10 +22,10 @@ def binarysearch_rec(arr,s,e,x):
         return i+1
     elif arr[i]<x:
         s=i+1
-        return binarysearch_rec(arr,s,e,x)+1
+        return binarysearch_rec(arr,s,e,x)
     else:
         e=i-1
-        return binarysearch_rec(arr,s,e,x)+1
+        return binarysearch_rec(arr,s,e,x)
     
 if __name__=='__main__':
     arr=list(map(int, input('Enter the array elements with spaces: ').split()))
