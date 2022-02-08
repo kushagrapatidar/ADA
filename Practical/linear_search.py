@@ -33,11 +33,12 @@ def find_freq(n):
         return len(idx_lst)
 
 if __name__== '__main__':
-    n1=int(input('Enter the number: '))
+    enter_num='Enter the number: '
+    n1=int(input(enter_num))
     linearsearch(n1)
     
     print('\n'*2)
-    n2=int(input('Enter the number: '))
+    n2=int(input(enter_num))
     idx_lst=linearsearch2(n2)
     if idx_lst==None:
         print(f'{n2} not found in the list')
