@@ -1,10 +1,10 @@
 #Quick Sort
 
+from random import randint
 #Partition Function
 def partition(start,end,arr):
-    from random import randint
     #Assigning the pivot element, start index and end index
-    randomindex=randint(0,len(arr))
+    randomindex=randint(start,end)
     piv=arr[randomindex]
     i=start
     j=end
@@ -18,7 +18,7 @@ def partition(start,end,arr):
         if i<j: #If the traversal is not complete
             arr[i],arr[j]=arr[j],arr[i] #Swap the current elements in hold
     
-    arr[j],arr[start]=arr[start],arr[j] #Swap the last swaped element smaller than pivot with pivot after the traversal is complete
+    arr[j],arr[randomindex]=arr[randomindex],arr[j] #Swap the last swaped element smaller than pivot with pivot after the traversal is complete
     
     return j
 
@@ -34,9 +34,8 @@ def quicksort(start,end,arr):
         
     return arr
 #Driver Code
-'''
-if True:
+if __name__=="__main__":
     arr=[7,6,10,5,9,2,213,1,15,10,25,7]
     print("Given array is\n",arr)
     arr=quicksort(0,len(arr)-1,arr).copy()
-    print("Sorted array is:\n",arr)'''
+    print("Sorted array is:\n",arr)
