@@ -2,8 +2,10 @@
 
 #Partition Function
 def partition(start,end,arr):
+    from random import randint
     #Assigning the pivot element, start index and end index
-    piv=arr[start]
+    randomindex=randint(0,len(arr))
+    piv=arr[randomindex]
     i=start
     j=end
 
