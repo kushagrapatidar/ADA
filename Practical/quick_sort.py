@@ -2,10 +2,14 @@
 
 from random import randint
 #Partition Function
+def pivot(start,end,arr):
+    piv=randint(start,end)
+    arr[start],arr[piv]=arr[piv],arr[start]
+    return partition(start,end,arr)
+
 def partition(start,end,arr):
     #Assigning the pivot element, start index and end index
-    randomindex=randint(start,end)
-    piv=arr[randomindex]
+    piv=arr[start]
     i=start
     j=end
 
@@ -18,7 +22,7 @@ def partition(start,end,arr):
         if i<j: #If the traversal is not complete
             arr[i],arr[j]=arr[j],arr[i] #Swap the current elements in hold
     
-    arr[j],arr[randomindex]=arr[randomindex],arr[j] #Swap the last swaped element smaller than pivot with pivot after the traversal is complete
+    arr[j],arr[start]=arr[start],arr[j] #Swap the last swaped element smaller than pivot with pivot after the traversal is complete
     
     return j
 
@@ -26,7 +30,7 @@ def partition(start,end,arr):
 def quicksort(start,end,arr):
     if start<end: #Function will execute only if there are atleast 2 elements in arr
         
-        piv_index=partition(start,end,arr) #Pivot element index obtained from Partition Function
+        piv_index=pivot(start,end,arr) #Pivot element index obtained from Partition Function
 
         #Sorting the partitions on both the sides of pivot element
         quicksort(start,piv_index-1,arr) #Sorting the left half
