@@ -6,17 +6,16 @@ def heapsort(arr):
         
         while i>0:
             
-            
             if arr[i]>arr[i-1]:
                 arr[i],arr[i-1]=arr[i-1],arr[i]
             
             if arr[i-1]>arr[(i-1)//2]:
                 arr[i-1],arr[(i-1)//2]=arr[(i-1)//2],arr[i-1]
             i-=2
-    
+            
     return arr
 
-def call_sort(arr):
+def call_heapsort(arr):
     i=len(arr)
     
     while i>0:
@@ -26,7 +25,7 @@ def call_sort(arr):
 if __name__=="__main__":
     arr=list(map(int, input('Enter the array elements with spaces: ').split()))
     print('Initial Array:\n',arr,"\n")
-    call_sort(arr)
+    call_heapsort(arr)
 
     print('Sorted Array:\n',arr)
 
