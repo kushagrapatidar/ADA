@@ -29,9 +29,8 @@ if __name__=="__main__":
 
     print('Sorted Array:\n',arr)
 
-#Rough Work
-
-    #Corresponding parent and first child node
+# Rough Work
+    # Corresponding parent and first child node
     # 2:1:0
     # 4:3:1
     # 6:5:2
