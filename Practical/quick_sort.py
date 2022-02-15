@@ -36,7 +36,7 @@ def quicksort(start,end,arr):
     return arr
 
 if __name__=="__main__":
-    arr=map(int,input().split())
+    arr=list(map(int, input('Enter the array elements with spaces: ').split()))
     print("Given array is\n",arr)
     arr=quicksort(0,len(arr)-1,arr).copy()
     print("Sorted array is:\n",arr)
