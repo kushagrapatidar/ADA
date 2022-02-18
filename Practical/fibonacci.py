@@ -10,6 +10,7 @@ def fibonacci(n):
         return memo[n]
     memo[n]=fibonacci(n-1)+fibonacci(n-2)
     return memo[n]
+
 n=int(input())
 memo=[None]*(n+1)
 print(fibonacci(n))
