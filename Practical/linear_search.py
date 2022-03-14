@@ -30,22 +30,22 @@ def find_freq(n):
     if idx_lst==None:
         return 0
     else:
-        return len(idx_lst)
+        return len(idx_lst),idx_lst
 
 if __name__== '__main__':
-    enter_num='Enter the number: '
-    n1=int(input(enter_num))
-    linearsearch(n1)
+    # enter_num='Enter the number: '
+    # n1=int(input(enter_num))
+    # linearsearch(n1)
     
-    print('\n'*2)
-    n2=int(input(enter_num))
-    idx_lst=linearsearch2(n2)
-    if idx_lst==None:
-        print(f'{n2} not found in the list')
-    else:
-        print(f"{n2} found in the list:\nIndex- {idx_lst}")
+    # print('\n'*2)
+    # n2=int(input(enter_num))
+    # idx_lst=linearsearch2(n2)
+    # if idx_lst==None:
+    #     print(f'{n2} not found in the list')
+    # else:
+    #     print(f"{n2} found in the list:\nIndex- {idx_lst}")
     
-    print('\n'*2)
+    # print('\n'*2)
     n3=int(input('Enter the number: '))
-    frequency=find_freq(n3)
-    print(f'Frequency of occurrence of {n3} in the list: {frequency}')
+    frequency,idx_lst=find_freq(n3)
+    print(f'Frequency of occurrence of {n3} in the list: {frequency}, at indices: {idx_lst}')
